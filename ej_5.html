@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="text" name="calculator" value="" id="calculator">
+    <br>
+    <button class="btn" type="button" name="button" onclick="ingresa(1)">1</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(2)">2</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(3)">3</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(4)">4</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(5)">5</button><br>
+    <button class="btn" type="button" name="button" onclick="ingresa(6)">6</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(7)">7</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(8)">8</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(9)">9</button>
+    <button class="btn" type="button" name="button" onclick="ingresa(0)">0</button>
+    <br>
+    <button class="btn" type="button" name="button" onclick="ingresa('+')">+</button>
+    <button class="btn" type="button" name="button" onclick="ingresa('-')">-</button>
+    <button class="btn" type="button" name="button" onclick="ingresa('*')">*</button>
+    <button class="btn" type="button" name="button" onclick="ingresa('/')">/</button>
+    <button class="btn" type="button" name="button" onclick="borrar()">C</button>
+    <br>
+    <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+
+    <script type="text/javascript">
+
+      var result = document.getElementsByName("result")[0];
+
+      var calculator = document.getElementsByName("calculator")[0];
+
+      var calcTotal = function(){
+        calculator.value = eval(calculator.value);
+      }
+
+      function ingresa(x) {
+        if (x == 0 && calculator.value == ""){
+          
+        } else {
+        document.getElementById("calculator").value += x;        
+        }
+      }
+    
+      function borrar() {
+        document.getElementById("calculator").value = "";        
+      }
+
+    </script>
+  </body>
+</html>
